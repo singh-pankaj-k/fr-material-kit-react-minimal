@@ -16,17 +16,17 @@
     "fm:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "fix:all": "npm run lint:fix && npm run fm:fix",
     "clean": "rm -rf node_modules .next out dist build",
-    "re:dev": "yarn clean && yarn install && yarn dev",
-    "re:build": "yarn clean && yarn install && yarn build",
+    "re:dev": "pnpm clean && pnpm install && pnpm dev",
+    "re:build": "pnpm clean && pnpm install && pnpm build",
     "re:build-npm": "npm run clean && npm install && npm run build",
-    "tsc:dev": "yarn dev & yarn tsc:watch",
+    "tsc:dev": "pnpm dev & pnpm tsc:watch",
     "tsc:watch": "tsc --noEmit --watch",
     "tsc:print": "npx tsc --showConfig"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
@@ -43,6 +43,7 @@
     "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",
     "react-dom": "^19.1.0",
+    "react-router": "^7.5.1",
     "react-router-dom": "^7.4.1",
     "simplebar-react": "^3.3.0"
   },
